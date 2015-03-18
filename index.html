@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Из иллюстратора в svg — Михаил Баранов</title>
+    <link rel="stylesheet" href="./node_modules/shower-ribbon/styles/screen.css"/>
+</head>
+<body>
+<header class="caption">
+    <h1>Из иллюстратора в svg</h1>
+    <p>Михаил Баранов, Эдстер</p>
+</header>
+
+<section class="slide" id="Cover"><div>
+    <h2>Из иллюстратора в svg</h2>
+    <p>Михаил Баранов, Эдстер</p>
+
+    <style>
+        #Cover h2 {
+            margin:30px 0 0;
+            text-align:center;
+            font-size:70px;
+        }
+        #Cover p {
+            margin:10px 0 0;
+            text-align:center;
+            font-style:italic;
+            font-size:20px;
+        }
+        #Cover p a {
+        }
+    </style>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Svg в интернете</h2>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Почему Illustrator?</h2>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Проблемные места</h2>
+
+    <ul>
+        <li class="next">Обводки</li>
+        <li class="next">Градиенты</li>
+        <li class="next">Стили кистей, эффекты</li>
+        <li class="next">Сложные контуры</li>
+        <li class="next">Многострочный текст</li>
+    </ul>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Чем проще — тем лучше</h2>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Помни про пикселы</h2>
+</div></section>
+
+<section class="slide"><div>
+    <p><img src="img/dump-logo-bad.png" alt=""/></p>
+</div></section>
+
+<section class="slide"><div>
+    <img src="img/dump-logo-bad-scale.png" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/pixel-preview.png" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/units.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <p><img src="img/dump-logo-good.png" alt=""/></p>
+</div></section>
+
+<section class="slide"><div>
+    <img src="img/dump-logo-good-scale.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <p>
+        <span style="padding: 10px; background: #f0f; display: inline-block;">
+            <img src="img/dump-logo-bad.svg" alt=""/>
+        </span>
+        &nbsp;&nbsp;&nbsp;
+        <span style="padding: 10px; background: #f0f; display: inline-block;">
+            <img src="img/dump-logo-good.svg" alt=""/>
+        </span>
+    </p>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Как сохранить файл в svg?</h2>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/save-default.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/save-default-more.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/save-more-profile.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/save-more-font.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/save-more-css.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Правила хорошего тона</h2>
+
+    <ul>
+        <li class="next">Имена слоёв и объектов</li>
+        <li class="next">Имена стилей</li>
+        <li class="next">Именованные артборды</li>
+    </ul>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Слои</h2>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/layers.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <pre>
+<code>&lt;svg ...></code>
+<code>    &lt;polygon points="..."/></code>
+<code>    &lt;g></code>
+<code>        &lt;path class="st0" d="..."/></code>
+<code>        &lt;polygon class="st0" points="..."/></code>
+<code>        &lt;polygon class="st0" points="..."/></code>
+<code>        &lt;path class="st0" d="..."/></code>
+<code>    &lt;/g></code>
+<code>&lt;/svg></code>
+    </pre>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/layers-named.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <pre>
+<code>&lt;svg ...></code>
+<code>    &lt;polygon <mark>id="background"</mark> points="..."/></code>
+<code>    &lt;g <mark>id="logo"</mark>></code>
+<code>        &lt;path class="st0" d="..."/></code>
+<code>        &lt;polygon class="st0" points="..."/></code>
+<code>        &lt;polygon class="st0" points="..."/></code>
+<code>        &lt;path class="st0" d="..."/></code>
+<code>    &lt;/g></code>
+<code>&lt;/svg></code>
+    </pre>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Стили</h2>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/styles.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <pre>
+<code>&lt;svg ...></code>
+<code>    &lt;style type="text/css"></code>
+<code>            .main_x002D_color{fill:#FFFFFF;}</code>
+<code>            .background_x002D_color{fill:#282828;}</code>
+<code>    &lt;/style></code>
+<code>    &lt;polygon <mark>class="background_x002D_color"</mark> points="..."/></code>
+<code>    &lt;g></code>
+<code>        &lt;path <mark>class="main_x002D_color"</mark> d="..."/></code>
+<code>    &lt;/g></code>
+<code>&lt;/svg></code>
+    </pre>
+</div></section>
+
+<section class="slide"><div>
+    <pre>
+<code>&lt;svg ...></code>
+<code>    &lt;style type="text/css"></code>
+<code>            .main_x002D_color{fill:#FFFFFF;}</code>
+<code>            .background_x002D_color{fill:#282828;}</code>
+<code>    &lt;/style></code>
+<code>    &lt;polygon class="background<mark>_x002D_</mark>color" points="..."/></code>
+<code>    &lt;g></code>
+<code>        &lt;path class="main_x002D_color" d="..."/></code>
+<code>    &lt;/g></code>
+<code>&lt;/svg></code>
+    </pre>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Artboards</h2>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/evil.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/artboards.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/save-artboards.png" alt=""/>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/artboards-result.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Неисправимые баги</h2>
+
+    <ul>
+        <li class="next">Символы</li>
+        <li class="next">Сдвиг артборда</li>
+    </ul>
+</div></section>
+
+<section class="slide cover h"><div>
+    <img src="img/symbols.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <img src="img/symbols-result.png" alt=""/>
+</div></section>
+
+<section class="slide">
+    <div>
+        <pre>
+<code>&lt;use</code>
+<code>    xlink:href="#search"</code>
+<code>    width="31.6" height="31.6"</code>
+<code>    x="-15.8" y="-15.8"</code>
+<code>    transform="matrix(1 0 0 -1 25.8887 25.8887)"</code>
+<code>    overflow="visible"/> </code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <pre>
+<code>&lt;use</code>
+<code>    xlink:href="#search"</code>
+<code>    width="31.6" height="31.6"</code>
+<code>    x="-15.8" y="-15.8"</code>
+<code>    <mark>transform="matrix(1 0 0 -1 25.8887 25.8887)"</mark></code>
+<code>    overflow="visible"/> </code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide"><div>
+    <h2>Автоматизация</h2>
+
+    <ul>
+        <li class="next">Аддоны для иллюстратора</li>
+        <li class="next">github.com/iconic/illustrator-svg-exporter</li>
+    </ul>
+</div></section>
+
+<section class="slide shout"><div>
+    <h2>Но как же Photoshop?</h2>
+</div></section>
+
+<script src="./node_modules/shower-core/shower.min.js"></script>
+</body>
+</html>
