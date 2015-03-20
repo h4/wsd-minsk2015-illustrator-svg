@@ -11,15 +11,19 @@
     <p>Михаил Баранов, Эдстер</p>
 </header>
 
-<section class="slide" id="Cover"><div>
+<section class="slide cover" id="Cover"><div>
     <h2>Из иллюстратора в svg</h2>
     <p>Михаил Баранов, Эдстер</p>
 
     <style>
+        #Cover {
+            color: #FFF;
+        }
         #Cover h2 {
             margin:30px 0 0;
             text-align:center;
             font-size:70px;
+            color: #FFF;
         }
         #Cover p {
             margin:10px 0 0;
@@ -36,20 +40,132 @@
     <h2>Svg в интернете</h2>
 </div></section>
 
+<section class="slide"><div>
+    <h2>Немного истории</h2>
+
+    <ul>
+        <li class="next">1998 г. — SVG 0.0</li>
+        <li class="next">2003 г. —  SVG 1.1</li>
+        <li class="next">2010 г. — iPhone 4</li>
+        <li class="next">2014 г. — iPhone 6</li>
+    </ul>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Преимущества svg</h2>
+
+    <ul>
+        <li class="next">Масштабируемость</li>
+        <li class="next">Адаптвность</li>
+        <li class="next">Меньше весит <span class="next">(иногда)</span></li>
+        <li class="next">Это просто текст</li>
+        <li class="next">Анимации</li>
+        <li class="next">Фильтры</li>
+        <li class="next">Модифицируемость из JS</li>
+    </ul>
+</div></section>
+
+<section class="slide"><div style="text-align: center">
+    <img height="500px" src="img/svgvspng_ru.svg" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/iphone-100.png" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/iphone-200.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Поддержка браузерами</h2>
+    <div class="next">
+        <img src="img/browsers.png" alt=""/>
+    </div>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Способы подключения в html</h2>
+
+    <ul>
+        <li class="next">&lt;img></li>
+        <li class="next">&lt;object></li>
+        <li class="next">&lt;svg></li>
+        <li class="next">&lt;svg> + &lt;use></li>
+        <li class="next">background</li>
+    </ul>
+</div></section>
+
 <section class="slide shout"><div>
     <h2>Почему Illustrator?</h2>
+</div></section>
+
+<section class="slide"><div>
+    <table>
+        <thead>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Win</td>
+                <td>Mac</td>
+                <td>Linux</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Illustrator</th>
+                <td>+</td>
+                <td>+</td>
+                <td>-</td>
+            </tr>
+            <tr class="next">
+                <th>Inkscape</th>
+                <td>+</td>
+                <td>+</td>
+                <td>+</td>
+            </tr>
+            <tr class="next">
+                <th>Sketch</th>
+                <td>-</td>
+                <td>+</td>
+                <td>-</td>
+            </tr>
+            <tr class="next">
+                <th>Corel Draw</th>
+                <td>+</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="next">
+                <th>Ручное редактирование</th>
+                <td>+</td>
+                <td>+</td>
+                <td>+</td>
+            </tr>
+        </tbody>
+    </table>
 </div></section>
 
 <section class="slide"><div>
     <h2>Проблемные места</h2>
 
     <ul>
-        <li class="next">Обводки</li>
         <li class="next">Градиенты</li>
         <li class="next">Стили кистей, эффекты</li>
         <li class="next">Сложные контуры</li>
         <li class="next">Многострочный текст</li>
     </ul>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/bugs-gradient.png" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/bug-text-chrome.png" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/bug-text-ff.png" alt=""/>
 </div></section>
 
 <section class="slide shout"><div>
@@ -94,6 +210,10 @@
             <img src="img/dump-logo-good.svg" alt=""/>
         </span>
     </p>
+</div></section>
+
+<section class="slide"><div>
+    <img src="img/dump-logo-scale.png" alt=""/>
 </div></section>
 
 <section class="slide shout"><div>
@@ -271,18 +391,52 @@
     </div>
 </section>
 
+<section class="slide cover w"><div>
+    <img src="img/artboard-bug.png" alt=""/>
+</div></section>
+
+<section class="slide cover w"><div>
+    <img src="img/artboard-bug-fix.png" alt=""/>
+</div></section>
+
 <section class="slide"><div>
     <h2>Автоматизация</h2>
 
     <ul>
-        <li class="next">Аддоны для иллюстратора</li>
+        <li class="next"><a href="https://creative.adobe.com/addons?pp=ILST&q=svg">Аддоны для иллюстратора</a></li>
         <li class="next">github.com/iconic/illustrator-svg-exporter</li>
     </ul>
+</div></section>
+
+<section class="slide"><div>
+    <img src="img/addons.png" alt=""/>
 </div></section>
 
 <section class="slide shout"><div>
     <h2>Но как же Photoshop?</h2>
 </div></section>
+
+<section class="slide"><div>
+    <img src="img/ps-layers.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <img  src="img/ps-assets.png" alt=""/>
+</div></section>
+
+<section class="slide"><div>
+    <h2>Из иллюстратора в svg</h2>
+    <p>Михаил Баранов</p>
+
+    <ul>
+        <li><a href="http://twitter.com/_h4_">twitter.com/_h4_</a></li>
+        <li><a href="mailto:mkhl@brnv.ru">mkhl@brnv.ru</a></li>
+    </ul>
+</div></section>
+
+<div class="progress">
+    <div></div>
+</div>
 
 <script src="./node_modules/shower-core/shower.min.js"></script>
 </body>
