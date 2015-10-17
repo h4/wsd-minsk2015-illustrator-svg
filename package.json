@@ -1,17 +1,21 @@
 {
-  "name": "dump2015-illustrator-svg",
+  "name": "minsk2015-illustrator-svg",
   "version": "1.0.0",
-  "description": "",
+  "description": "Slides for my talk about svg",
   "main": "index.js",
   "dependencies": {
-    "shower-bright": "^1.0.11",
     "shower-core": "^1.0.7",
     "shower-ribbon": "^1.0.11"
+  },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/h4/wsd-minsk2015-illustrator-svg.git"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Mikhail Baranov <mikhail.baranov@gmail.com>",
+  "license": "MIT"
 }
