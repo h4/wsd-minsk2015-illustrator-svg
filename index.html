@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./node_modules/shower-ribbon/styles/screen.css"/>
     <svg xmlns="http://www.w3.org/2000/svg" height="0" style="position: absolute;">
         <defs>
+            <filter id="xorFilter">
+                <feComposite in="gh-precision-1" in2="gh-precision-4" operator="xor" />
+            </filter>
         <symbol id="tick">
             <path fill="#090" d="M16,7.4L8.9,14l-1.5-1.4L14.5,6L16,7.4z"/>
             <path fill="#090" d="M4,9.4L8.9,14l1.5-1.4L5.5,8L4,9.4z"/>
@@ -33,6 +36,36 @@
 	c0.7688,0.8391,1.2328,1.9102,1.2328,3.2203c0,4.6102-2.8077,5.625-5.4796,5.9227c0.4313,0.3727,0.8132,1.1016,0.8132,2.2195
 	c0,1.6031-0.0164,2.8969-0.0164,3.293c0,0.3187,0.2179,0.6937,0.825,0.5765c4.7649-1.5891,8.2008-6.0867,8.2008-11.3859
 	C1516-499.2574,1510.6257-504.6316,1504-504.6316z"/>
+        </symbol>
+        <symbol id="intersect" viewBox="1489 -499.6316 24 23.4081">
+            <g>
+                <path d="M1494.557-481.7183c0.9229,1.5622,2.326,1.4019,3.1381,1.1313c-0.8215,0.2537-2.1681,0.3721-3.095-1.1446
+		c-0.1278-0.1917-0.4611-0.6263-0.9187-0.9166C1494.1171-482.3599,1494.4247-481.9413,1494.557-481.7183z M1498.0258-476.8222
+		c0-0.2859-0.0117-1.2328-0.0164-2.2336c-2.6506,0.484-3.5684-0.452-3.924-1.1459c0.303,0.7155,1.2162,1.7098,3.9146,1.1702v2.2
+		c0,0.223-0.1122,0.4996-0.4152,0.5868C1497.9016-476.3162,1498.0258-476.5841,1498.0258-476.8222z M1489-487.6316
+		c0-6.6,5.4-12,12-12C1494.3743-499.6316,1489-494.2574,1489-487.6316z M1501.0023-493.8283
+		c1.0195,0.0047,2.0461,0.1383,3.0048,0.4055c1.4331-0.9725,2.3636-1.2096,2.8596-1.2509
+		c-0.4938,0.0222-1.4241,0.2386-2.8666,1.2421c-1-0.3-2-0.4-3-0.4s-2,0.1-3,0.4c-0.109-0.0711-0.201-0.1196-0.3042-0.1829
+		c0.1031,0.0654,0.1952,0.1156,0.3041,0.1893C1498.9563-493.6924,1499.9828-493.8236,1501.0023-493.8283z M1510.2422-495.2827
+		c1.6958,2.067,2.7015,4.7254,2.658,7.6511c0,5.2869-3.3838,9.7765-8.165,11.3868c0.0239-0.0032,0.0388,0.0042,0.0641-0.0007
+		c4.7649-1.5891,8.2008-6.0867,8.2008-11.3859C1513-490.5394,1511.964-493.2054,1510.2422-495.2827z M1497.2-476.2316
+		c0.1541,0.0257,0.2802,0.0169,0.3849-0.0132c-0.1041,0.0235-0.2286,0.0264-0.3771-0.0009
+		c-4.7695-1.5867-8.2078-6.082-8.2078-11.3859C1489-482.3316,1492.4-477.8316,1497.2-476.2316z M1503.9742-476.822
+		c0-0.3961,0.0164-1.6899,0.0164-3.293c0-1.1179-0.382-1.8468-0.8132-2.2195c2.6719-0.2977,5.4796-1.3125,5.4796-5.9227
+		c0-1.3101-0.464-2.3812-1.2328-3.2203c0.0709-0.1727,0.2303-0.6523,0.2367-1.3334c-0.0117,0.7126-0.2021,1.2037-0.2607,1.3793
+		c0.8,0.8,1.2,1.9,1.2,3.2c0,4.6-2.8,5.6-5.5,5.9c0.4,0.4,0.8,1.1,0.8,2.2v3.3c0,0.3,0.2,0.7,0.8,0.6
+		c0.0118-0.004,0.0229-0.0092,0.0349-0.0132C1504.1841-476.1709,1503.9742-476.5165,1503.9742-476.822z M1507.6193-493.485
+		c-0.0509-0.3565-0.1476-0.748-0.3146-1.1683c0,0-0.1414-0.0452-0.438-0.0204c0.2936-0.0132,0.4335,0.0421,0.4335,0.0421
+		C1507.4707-494.2173,1507.5681-493.8342,1507.6193-493.485z M1501-499.6316c3.7179,0,7.0408,1.6929,9.2422,4.3489
+		C1508.0544-497.9493,1504.7179-499.6316,1501-499.6316z M1498.9001-482.3316c-2.7-0.3-5.5-1.3-5.5-5.9c0-1.3,0.5-2.4,1.2-3.2
+		c-0.1-0.3-0.5-1.5,0.1-3.2c0,0,0.9215-0.2537,2.9958,1.0172c-2.0697-1.3132-2.996-1.0412-2.996-1.0412
+		c-0.6538,1.6523-0.2413,2.8734-0.1195,3.1781c-0.7664,0.8391-1.2351,1.9101-1.2351,3.2203c0,4.5984,2.8008,5.6297,5.4656,5.932
+		c-0.3422,0.3-0.6515,0.8297-0.7617,1.6031c-0.097,0.0436-0.2195,0.0903-0.3541,0.1352c0.1536-0.0474,0.2949-0.0974,0.405-0.1446
+		C1498.2001-481.5316,1498.5001-482.0316,1498.9001-482.3316z M1492.8-482.1317c-0.4-0.2-1-0.8,0-0.8
+		c0.325,0,0.6226,0.1193,0.8813,0.2834c-0.2743-0.1815-0.5984-0.3121-0.9642-0.3076c-0.9938,0.0118-0.4008,0.5602,0.0211,0.7899
+		c0.5156,0.2836,1.0992,1.3476,1.2281,1.6945c0.0306,0.0822,0.0699,0.1739,0.119,0.2697c-0.0339-0.08-0.0654-0.1595-0.0854-0.2299
+		C1493.9-480.7316,1493.3-481.8316,1492.8-482.1317z"/>
+            </g>
         </symbol>
         <symbol  id="evil" viewBox="-25 -32.5 50 65">
             <g>
@@ -219,6 +252,12 @@
 
 <section class="slide cover h">
     <div>
+        <img src="img/olymp-scheme-zoom-1-1.png" alt="">
+    </div>
+</section>
+
+<section class="slide cover h">
+    <div>
         <img src="img/olymp-scheme-zoom-2.png" alt="">
     </div>
 </section>
@@ -226,18 +265,6 @@
 <section class="slide cover h">
     <div>
         <img src="img/olymp-scheme-zoom-3.png" alt="">
-    </div>
-</section>
-
-<section class="slide cover h">
-    <div>
-        <img src="img/olymp-shop.png" alt="">
-    </div>
-</section>
-
-<section class="slide cover h">
-    <div>
-        <img src="img/olymp-shop-zoom.png" alt="">
     </div>
 </section>
 
@@ -255,41 +282,83 @@
             <li class="next">1998 — SVG 0.0</li>
             <li class="next">2001 —  SVG 1.0</li>
             <li class="next">2003 —  SVG 1.1</li>
-            <li class="next">2010 г. — iPhone 4<span class="next">, Retina</span></li>
-            <li class="next">2014 г. — iPhone 6<span class="next">, Retina 3x</span></li>
+            <li class="next"><img src="img/EMOsleep.jpeg" style="height: 48px; vertical-align: middle;" alt=""></li>
+            <li class="next">2010 — iPhone 4<span class="next">, Retina</span></li>
+            <li class="next">2014 — iPhone 6<span class="next">, Retina 3x</span></li>
         </ul>
     </div>
 </section>
 
 <section class="slide">
     <div>
-        <div class="browsers" style="position: relative;">
-            <img src="img/browsers.png" alt="" style="width: 80%; margin: 0 auto; display: block;">
-            <span class="next"
-                style="position: absolute;
-                background: #900;
-                right: 180px;
-                bottom: 20px;
-                color: #FFF;
-                width: 50px;
-                height: 50px;
-                text-align: center;
-                border-radius: 50%;
-                box-shadow: 0 0 20px #FF0;">9+</span>
-        </div>
+        <style>
+            .browsers-list img {
+                width: 48px;
+                vertical-align: middle;
+                margin: 10px;
+            }
+        </style>
+        <h2>Поддержка браузерами</h2>
+
+        <table class="browsers-list">
+            <tr class="next">
+                <td><img src="img/browsers/chrome_256x256.png" alt=""></td>
+                <td>Всегда была</td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/firefox_256x256.png" alt=""></td>
+                <td>v2 — частично. Потом стало хорошо</td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/internet-explorer_256x256.png" alt=""></td>
+                <td>IE 9+. <span class="next">С багами до сих пор</span></td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/opera_256x256.png" alt=""></td>
+                <td>В 10 было. Про 9 — неизвестно</td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/safari_256x256.png" alt=""></td>
+                <td>Как все вебкиты</td>
+            </tr>
+        </table>
     </div>
 </section>
 
-<section class="slide cover w">
+<section class="slide">
     <div>
-        <img src="img/kosmich.jpg" alt="">
+        <style>
+            .browsers-list img {
+                width: 48px;
+                vertical-align: middle;
+                margin: 10px;
+            }
+        </style>
+        <h2>На мобильных</h2>
+
+        <table class="browsers-list">
+            <tr class="next">
+                <td><img src="img/browsers/android_256x256.png" alt=""></td>
+                <td>v2 — нет. v3 — частично. v4 — ок</td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/chrome_256x256.png" alt=""></td>
+                <td>Всегда была</td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/safari-ios_256x256.png" alt=""></td>
+                <td>Всегда была</td>
+            </tr>
+            <tr class="next">
+                <td><img src="img/browsers/opera-mini_256x256.png" alt=""></td>
+                <td>Сейчас есть</td>
+            </tr>
+        </table>
     </div>
 </section>
 
 <section class="slide cover w main-cover">
     <div>
-        <h2 class="next">Зачем нам SVG?</h2>
-
         <img src="img/for-what.jpg" alt="">
     </div>
 </section>
@@ -297,6 +366,17 @@
 <section class="slide cover h">
     <div>
         <img src="img/svg-vs-png.png" alt="">
+    </div>
+</section>
+
+<section class="slide cover">
+    <div>
+        <img src="img/makeev.jpg" alt="">
+        <h2 style="position: absolute; bottom: 0; left: 0; right: 0; padding: 50px 120px;">
+            Ссылку дашь?</h2>
+        <h2 class="next" style="position: absolute; background: rgba(255, 255, 255, .8); top: 0; left: 0; right: 0;
+        margin: 0; padding: 50px 120px;">
+            <a href="http://svgvspng.com/#ru">svgvspng.com</a></h2>
     </div>
 </section>
 
@@ -328,11 +408,23 @@
 
 <section class="slide">
     <div>
+        <h2>Нужно ли делать icon@3x.png?</h2>
+
+        <ul>
+            <li class="next">Для дескотопа — нет</li>
+            <li class="next">icon@1x.png — 1861 байт</li>
+            <li class="next">icon.svg — 1093 байта</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
         <h2>Когда SVG не подходит?</h2>
 
         <ul>
             <li class="next">Маленькие иконки</li>
-            <li class="next">Сложные градиенты</li>
+            <li class="next">Сложные градиенты и «меши»</li>
         </ul>
     </div>
 </section>
@@ -346,6 +438,58 @@
 <section class="slide cover h">
     <div>
         <img src="img/favicons-large.png" alt="" class="">
+    </div>
+</section>
+
+<section class="slide cover h">
+    <div>
+        <img src="img/Lie_to_me_(3)-1.jpg" alt="" class="">
+    </div>
+</section>
+
+<section class="slide cover w">
+    <div>
+        <img src="img/github-source-1.png" alt="" class="">
+    </div>
+</section>
+
+<section class="slide cover w">
+    <div>
+        <img src="img/github-source-2.png" alt="" class="">
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Почему не иконочный шрифт?</h2>
+
+        <ol>
+            <li class="next">Некоторые устройства не поддерживают области частного использования Unicode</li>
+            <li class="next">Чёрные квадратики и крестики в Opera Mini</li>
+            <li class="next">Разный рендеринг в разных браузерах</li>
+            <li class="next">Только монохромные иконки</li>
+            <li class="next">Не анимируются. <span class="next">Никак</span></li>
+            <li class="next">И вообще, это хак</li>
+        </ol>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Ещё больше аргументов против иконочного шрифта</h2>
+
+        <ul>
+            <li class="next"><a href="http://frontender.info/ten-reasons-we-switched-from-an-icon-font-to-svg/">
+                Опыт lonelyplanet.com. Перевод на frontender.info
+            </a></li>
+            <li class="next"><a href="http://youtu.be/9xXBYcWgCHA">Проблемы для людей с дислексией. Видео</a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide cover">
+    <div style="text-align: center">
+        <img src="img/github_sad.svg" alt="" style="height: 80%; left: 50%; top: 10%; transform: translateX(-50%);">
     </div>
 </section>
 
@@ -399,7 +543,7 @@
         }
 
         .app__inkscape {
-            background-image: url("img/app__inkscape.svg");
+            background-image: url("img/app__inkscape.jpg");
         }
 
         .app__sublime {
@@ -478,8 +622,12 @@
         <ul>
             <li class="next">File > Export > Paths to Illustrator&hellip;</li>
         </ul>
+    </div>
+</section>
 
-        <div class="next"><img src="img/ps-path-to-ai.png" style="height: 300px" alt=""></div>
+<section class="slide cover h">
+    <div>
+        <img src="img/ps-path-to-ai.png" alt="">
     </div>
 </section>
 
@@ -514,6 +662,24 @@
 
 <section class="slide cover h">
     <div>
+        <img src="img/save-1-1.png" alt="">
+    </div>
+</section>
+
+<section class="slide cover h">
+    <div>
+        <img src="img/save-1-3.png" alt="">
+    </div>
+</section>
+
+<section class="slide cover h">
+    <div>
+        <img src="img/save-1-2.png" alt="">
+    </div>
+</section>
+
+<section class="slide cover h">
+    <div>
         <img src="img/save-2.png" alt="">
     </div>
 </section>
@@ -536,7 +702,7 @@
     </div>
 </section>
 
-<section class="slide cover h">
+<section class="slide cover w">
     <div>
         <img src="img/save-6.png" alt="">
     </div>
@@ -581,12 +747,20 @@
         <svg xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 256 256"
              style="position: relative; margin: -40px auto 0; display: block; width: 512px; height: 512px;">
-            <use xlink:href="#gh-precision-1"
-                 style="width: 100%; fill: rgba(255, 0, 0, .5); position: absolute; left: 0; top: 0;"></use>
-            <use xlink:href="#gh-precision-4"
-                 style="width: 100%; fill: rgba(0, 0, 255, .5); position: absolute; left: 0; top: 0;"></use>
+            <use xlink:href="#intersect"
+                 style="width: 100%; fill: rgba(255, 255, 255, 1); position: absolute; left: 0; top: 0;"></use>
         </svg>
     </div>
+</section>
+
+<section class="slide cover w">
+    <div>
+        <img src="img/Lie-To-Me-S2-Poster-Tim-Roth-as-Dr.-Cal-Lightman.jpg" alt="">
+    </div>
+</section>
+
+<section class="slide cover w">
+    <div><img src="img/github-precission.png" alt=""></div>
 </section>
 
 <section class="slide cover">
@@ -603,9 +777,23 @@
     </div>
 </section>
 
+<section class="slide cover">
+    <div>
+        <div style="position: absolute; left: 20px; top: 20px; right: 20px; bottom: 20px; background: #FFF;">
+            <img src="tests/precission/coat-4.svg"
+                 style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); height: 200%; z-index: 3;"
+                 alt="">
+            <img src="tests/precission/coat-1.svg"
+                 class="next"
+                 style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); height: 200%; z-index: 4; opacity: 0.5;"
+                 alt="">
+        </div>
+    </div>
+</section>
+
 <section class="slide">
     <div>
-        <h2>Размер имеет значение</h2>
+        <h2>Сколько вешать в граммах?</h2>
         
         <table>
             <thead>
@@ -663,7 +851,7 @@
 
 <section class="slide cover w main-cover">
     <div>
-        <h2 class="next">Оптимизация процесса</h2>
+        <h2 class="next" style="background: rgba(0,0,0,.8); padding: 5px 0 10px; margin: 400px -120px 0;">Оптимизация процесса</h2>
         <img src="img/tips.jpg" alt="">
     </div>
 </section>
@@ -673,7 +861,7 @@
         <h2>Оптимизация процесса</h2>
 
         <ul>
-            <li>Пикселы имеют значение</li>
+            <li>Пиксели имеют значение</li>
         </ul>
     </div>
 </section>
@@ -702,12 +890,18 @@
     </div>
 </section>
 
+<section class="slide cover h">
+    <div>
+        <img src="img/edge-bug.png" alt="">
+    </div>
+</section>
+
 <section class="slide">
     <div>
         <h2>Оптимизация процесса</h2>
 
         <ul>
-            <li>Пикселы имеют значение</li>
+            <li>Пиксели имеют значение</li>
             <li>Имена для слоёв и объектов</li>
         </ul>
     </div>
@@ -721,8 +915,8 @@
 
 <section class="slide">
     <div>
-        <h2>Имена стали идентификаторами</h2>
-<pre>
+        <h2>Был слой — стал id</h2>
+<pre class="next">
 <code>&lt;svg ...></code>
 <code>    &lt;g <mark>id="tree__item_id_31"</mark>></code>
 <code>        &lt;circle <mark>id="tree__pointer"</mark> /></code>
@@ -733,9 +927,13 @@
     </div>
 </section>
 
-<section class="slide cover h">
+<section class="slide">
     <div>
-        <img src="img/tree__bugs.png" alt="">
+        <h2>А зачем?</h2>
+
+        <div>
+            <img src="img/tree__bugs.png" alt="" style="width: 100%;">
+        </div>
     </div>
 </section>
 
@@ -744,7 +942,7 @@
         <h2>Оптимизация процесса</h2>
 
         <ul>
-            <li>Пикселы имеют значение</li>
+            <li>Пиксели имеют значение</li>
             <li>Имена для слоёв и объектов</li>
             <li>Стили для элементов</li>
         </ul>
@@ -770,10 +968,10 @@
 </section>
 
 <section class="slide"><div>
-    <h2>Стили стали стилями</h2>
-    <pre>
+    <h2>Был style — стал &lt;style&gt; <span class="next">(и class)</span></h2>
+    <pre class="next">
 <code>&lt;svg ...></code>
-<code>    &lt;style type="text/css"></code>
+<code>    &lt;<mark>style</mark> type="text/css"></code>
 <code>            .chip-icon_x002D_highlight{fill:#FFFFFF;}</code>
 <code>    &lt;/style></code>
 <code>    &lt;path <mark>class="background_x002D_color"</mark> d="..."/></code>
@@ -786,7 +984,7 @@
         <h2>Оптимизация процесса</h2>
 
         <ul>
-            <li>Пикселы имеют значение</li>
+            <li>Пиксели имеют значение</li>
             <li>Имена для слоёв и объектов</li>
             <li>Стили для элементов</li>
             <li>Библиотека иконок</li>
@@ -815,7 +1013,7 @@
         <h2>Оптимизация процесса</h2>
 
         <ul>
-            <li>Пикселы имеют значение</li>
+            <li>Пиксели имеют значение</li>
             <li>Имена для слоёв и объектов</li>
             <li>Стили для элементов</li>
             <li>Библиотека иконок</li>
@@ -867,6 +1065,7 @@
 
         <ul>
             <li class="next">Object > Artboards > Fit to Artwork Bounds</li>
+            <li class="next">Shift + O, Fit to…</li>
         </ul>
 
         <div class="next">
@@ -920,7 +1119,7 @@
 
 <section class="slide cover w main-cover">
     <div>
-        <h2 style="color: #075ac8; text-shadow: 0 0 10px #FFF;">Из Photoshop в SVG</h2>
+        <h2 style="color: #FFF; text-shadow: 2px 2px 2px #075ac8;">Из фотошопа <span style="opacity: .5">в SVG</span></h2>
         <img src="img/cover-PS.jpg" alt="">
     </div>
 </section>
@@ -930,8 +1129,8 @@
         <h2>Жить стало лучше&hellip;</h2>
 
         <ul>
-            <li class="next">PS CC — File > Extract Assets&hellip;</li>
-            <li class="next">PS CC 2015 — Layer > Export As&hellip;</li>
+            <li class="next">PS Creative Cloud <span class="next"> — File > Extract Assets&hellip;</span></li>
+            <li class="next">PS CC 2015 <span class="next"> — Layer > Export As&hellip;</span></li>
         </ul>
     </div>
 </section>
@@ -979,7 +1178,31 @@
 
 <section class="slide">
     <div>
-        <h2>Способы вставки и вот это вот всё...</h2>
+        <h2>SVG в моём коде</h2>
+
+        <pre>
+<code class="next">&lt;img src="pic.svg" /&gt;</code>
+<code class="next">style="background: url(pic.svg)"</code>
+<code class="next">&lt;div&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;</code>
+<code class="next">&lt;div&gt;&lt;svg&gt;&lt;use xlink:href="#pic"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/div&gt;</code>
+        </pre>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>And one more thing</h2>
+
+        <ul>
+            <li class="next">SVGO</li>
+            <li class="next">PostCSS-плагины</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide shout">
+    <div>
+        <h2>Спасибо!</h2>
     </div>
 </section>
 
